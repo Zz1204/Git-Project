@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:nomock": "vue-cli-service build --mode nomock",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -12,6 +13,7 @@
     "core-js": "^2.6.5",
     "dayjs": "^1.8.12",
     "flex.css": "^1.1.7",
+    "mockjs": "^1.0.1-beta3",
     "nprogress": "^0.2.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
