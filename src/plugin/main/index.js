@@ -3,6 +3,10 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // flex布局库
 import 'flex.css'
+// 组件
+import '@/components'
+// svg 图标
+import '@/assets/svg-icons'
 // axios
 import axios from '@/plugin/axios'
 export default {

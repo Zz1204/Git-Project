@@ -17,5 +17,8 @@ new Vue({
   render: h => h(App),
   created() {
     this.$store.commit('admin/menu/headerSet', menuHeader)
+  },
+  mounted() {
+    this.$store.commit('admin/theme/dom', 'd2')
   }
 }).$mount('#app')

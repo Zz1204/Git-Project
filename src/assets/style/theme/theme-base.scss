@@ -1,0 +1,70 @@
+
+.el-menu{
+  height: 100%;
+  .el-menu-item{
+    height: 100%;
+    line-height: 70px;
+  }
+}
+
+
+// 整体框架结构
+.theme-layout-group{
+  width: 100%;
+  height: 100%;
+  .layout-group--header-box{
+    height: 70px;
+    line-height: 70px;
+    @extend %unable-select;
+    .header-logo{
+      width: 200px;
+      text-align: center;
+    }
+    .header-right{
+      border-bottom: 1px solid;
+      .theme-header-menu {
+        overflow: hidden;
+        &.is-scrollable {
+          position: relative;
+          padding: 0 20px;
+          .theme-header-menu__prev, .theme-header-menu__next {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+          }
+        }
+        .theme-header-menu--content {
+          overflow: hidden;
+          .theme-header-menu--scroll {
+            white-space: nowrap;
+            position: relative;
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            transition: transform .3s;
+            transition: transform .3s, -webkit-transform .3s;
+            transition: transform .3s,-webkit-transform .3s;
+            float: left;
+          }
+        }
+        .theme-header-menu__prev, .theme-header-menu__next {
+          height: 70px;
+          position: absolute;
+          top: 0;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        .theme-header-menu__prev {
+          left: 0;
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+        }
+        .theme-header-menu__next {
+          right: 0;
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+        }
+      }
+    }
+    
+  }
+}

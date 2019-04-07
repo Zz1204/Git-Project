@@ -1,4 +1,16 @@
 // 每个主题特有的设置
 .theme-#{$theme-name} {
-  background: $theme-bg-color;
+  .theme-layout-group{
+    background: $theme-bg-color;
+    .layout-group--header-box{
+      .header-logo{
+        background: $theme-aside-bg-color;
+        color: $theme-aside-color;
+      }
+      .header-right{
+        border-color: $theme-borderB-color;
+        background: $theme-nav-bg-color;
+      }
+    }
+  }
 }

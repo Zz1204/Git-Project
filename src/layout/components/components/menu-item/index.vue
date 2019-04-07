@@ -1,11 +1,11 @@
 <template>
   <el-menu-item :index="menu.path || uniqueId">
-    <i v-if="menu.icon" :class="`fa fa-${menu.icon}`"></i>
-    <i
+    <h-icon v-if="menu.icon" :name="menu.icon"></h-icon>
+    <h-icon
       v-if="(menu.icon === undefined) & !menu.iconSvg"
-      class="fa fa-file-o"
-    ></i>
-    <h-icon-svg v-if="menu.iconSvg" :name="menu.iconSvg"></h-icon-svg>
+      name="file-o"
+    ></h-icon>
+    <h-icon-svg v-if="menu.svgIcon" :name="menu.svgIcon"></h-icon-svg>
     <span slot="title">{{ menu.title || '未命名菜单' }}</span>
   </el-menu-item>
 </template>
