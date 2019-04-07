@@ -1,0 +1,4 @@
+// 每个主题特有的设置
+.theme-#{$theme-name} {
+  background: $theme-bg-color;
+}

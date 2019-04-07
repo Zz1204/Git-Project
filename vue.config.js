@@ -16,6 +16,15 @@ module.exports = {
   devServer: {
     publicPath // 和 publicPath 保持一致
   },
+  css: {
+    loaderOptions: {
+      // 设置 scss 公用变量文件
+      sass: {
+        // eslint-disable-next-line quotes
+        data: `@import '~@/assets/style/public.scss';`
+      }
+    }
+  },
   chainWebpack: config => {
     /**
      * 删除懒加载模块的 prefetch preload，降低带宽压力
@@ -59,7 +68,7 @@ module.exports = {
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
       .options({
-        symbolId: 'z-[name]'
+        symbolId: 'h-[name]'
       })
       .end()
     // image exclude

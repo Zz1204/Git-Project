@@ -1,3 +1,6 @@
+// element
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 // flex布局库
 import 'flex.css'
 // axios
@@ -17,5 +20,7 @@ export default {
     Vue.prototype.$buildTime = process.env.VUE_APP_BUILD_TIME
     // 请求
     Vue.prototype.$http = axios
+    // Element
+    Vue.use(ElementUI)
   }
 }

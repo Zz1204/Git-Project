@@ -7,12 +7,15 @@ import admin from '@/plugin/main'
 import router from './router'
 // store
 import store from './store'
-
+// 菜单
+import { menuHeader } from '@/menu'
 // 核心插件
 Vue.use(admin)
-
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  created() {
+    this.$store.commit('admin/menu/headerSet', menuHeader)
+  }
 }).$mount('#app')

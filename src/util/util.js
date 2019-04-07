@@ -1,0 +1,23 @@
+import cookies from './util.cookies'
+import db from './util.db'
+
+const util = {
+  cookies,
+  db
+}
+
+/**
+ * @description 打开新页面
+ * @param {String} url 地址
+ */
+util.open = function(url) {
+  var a = document.createElement('a')
+  a.setAttribute('href', url)
+  a.setAttribute('target', '_blank')
+  a.setAttribute('id', 'admin-link-temp')
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(document.getElementById('admin-link-temp'))
+}
+
+export default util
