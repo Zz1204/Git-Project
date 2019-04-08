@@ -8,6 +8,8 @@ import routes from './routers'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
+// 改变title
+import util from '@/util/util'
 Vue.use(VueRouter)
 
 // 导出路由 在 main.js 里使用
@@ -22,9 +24,11 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-router.afterEach(() => {
+router.afterEach(to => {
   // 关闭进度条
   NProgress.done()
+  // 改变title
+  util.title(to.meta.title)
 })
 
 export default router

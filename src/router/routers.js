@@ -1,4 +1,5 @@
 import layoutHeaderAside from '@/layout'
+import agent from './modules/agent'
 const frameIn = [
   {
     path: '/',
@@ -40,11 +41,6 @@ const frameIn = [
       }
     ]
   },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/About.vue')
-  }
+  agent
 ]
-
 export default [...frameIn]

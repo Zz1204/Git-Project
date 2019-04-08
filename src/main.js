@@ -8,7 +8,7 @@ import router from './router'
 // store
 import store from './store'
 // 菜单
-import { menuHeader } from '@/menu'
+import { menuHeader, menuAside } from '@/menu'
 // 核心插件
 Vue.use(admin)
 new Vue({
@@ -20,5 +20,15 @@ new Vue({
   },
   mounted() {
     this.$store.commit('admin/theme/dom', 'd2')
+  },
+  watch: {
+    // 监听路由 控制侧边栏显示
+    '$route.matched'(val) {
+      const _side = menuAside.filter(menu => menu.path === val[0].path)
+      this.$store.commit(
+        'admin/menu/asideSet',
+        _side.length > 0 ? _side[0].children : []
+      )
+    }
   }
 }).$mount('#app')
